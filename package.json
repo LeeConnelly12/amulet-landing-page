@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "development": "mix",
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "production": "mix --production",
+    "prod": "mix --production"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.13",
+    "postcss": "^8.2.7",
+    "tailwindcss": "^2.0.3"
+  }
+}
