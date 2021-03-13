@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <script src="./js/app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body class="antialiased bg-blue-50 font-body" x-data="{ atTop: window.pageYOffset < 64 }" @scroll.window="atTop = window.pageYOffset < 64">
+
+    <svg class="absolute right-0 hidden w-11/12 gray-svg xl:block" width="1418" height="1600" fill="none" viewBox="0 0 1418 1472" preserveAspectRatio="none">
+        <path d="M1417.5 243L1002.86 0 32.683 554.85c-42.09 24.072-42.35 84.677-.466 109.107L1417.5 1472V243z" fill="#4B5770"/>
+    </svg>
+
+    <svg class="absolute top-0 right-0 h-40 corner-svg w-52" viewBox="0 0 1098 642" fill="none" preserveAspectRatio="none">
+        <path d="M1098 0H0l1098 642V0z" fill="url(#paint0_linear)"/>
+        <defs>
+            <linearGradient id="paint0_linear" x1="1" y1="292" x2="1099" y2="292" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5C40E0"/>
+                <stop offset="1" stop-color="#E788AC"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <nav class="fixed top-0 left-0 right-0 z-10 p-4 text-white transition duration-300 xl:px-9 xl:py-9" :class="{ 'bg-white' : !atTop, 'text-white': atTop, 'text-black': !atTop, 'shadow-md': !atTop }">
+        <div class="flex items-center justify-between">
+            <div class="font-bold text-black">company</div>
+            <button class="inline-flex items-center justify-center w-12 h-8 bg-purple-500 rounded-xl xl:hidden" type="button">
+                <svg width="16" height="10" fill="none">
+                    <rect class="text-white fill-current" y="4" width="16" height="2"/>
+                    <rect class="text-white fill-current" y="8" width="16" height="2"/>
+                    <rect class="text-white fill-current" width="16" height="2"/>
+                </svg>
+            </button>
+            <ul class="items-center hidden grid-flow-col font-medium xl:grid gap-x-16">
+                <li>
+                    <a class="opacity-70 hover:opacity-100" href="#!">Experts</a>
+                </li>
+                <li>
+                    <a class="opacity-70 hover:opacity-100" href="#!">Predictions</a>
+                </li>
+                <li>
+                    <a class="opacity-70 hover:opacity-100" href="#!">Whitepaper</a>
+                </li>
+                <li>
+                    <a class="opacity-70 hover:opacity-100" href="#!">Team</a>
+                </li>
+                <li class="grid grid-flow-col">
+                    <a href="#!">
+                        <svg class="opacity-70 hover:opacity-100" width="20" height="20" viewBox="0 0 155.139 155.139">
+                            <path class="fill-current" d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"/>
+                        </svg>
+                    </a>
+                    <a class="ml-4" href="#!">
+                        <svg class="opacity-70 hover:opacity-100" height="20" width="20" viewBox="0 0 465.882 465.882">
+                            <path class="fill-current" d="M465.882 0L0 262.059l148.887 55.143 229.643-215.29-174.674 235.65.142.053-.174-.053v128.321l83.495-97.41 105.77 39.175z"/>
+                        </svg>
+                    </a>
+                    <a class="ml-5" href="#!">
+                        <svg class="opacity-70 hover:opacity-100" width="20" height="20" viewBox="0 0 512 512">
+                            <path class="fill-current" d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="inline-flex items-center h-10 px-6 font-normal text-white bg-purple-500 rounded-full" href="#!">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="relative pt-30 lg:pt-36 xl:pt-80"> 
+        <div class="container px-4 mx-auto">
+            <div class="md:w-3/4 lg:w-8/12 xl:w-5/12">
+                <h1 class="text-2xl md:text-5xl">Dishonesty shouldn't be profitable.</h1>
+                <p class="hidden w-3/4 pt-5 text-gray-400 md:pt-10 sm:block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus quos, vitae dolor cumque eligendi ipsa.</p>
+            </div>
+            <a class="inline-flex items-center px-10 font-bold text-white shadow-md h-11 bg-gradient-to-r from-green-400 to-green-100 rounded-xl mt-7 md:mt-10 " href="#!">Get Started for Free</a>
+        </div>
+    </section>
+
+    <section class="py-24 mt-10 text-white bg-gray-500 md:py-28 discover xl:bg-transparent xl:pt-72 xl:mt-0">
+        <div class="container px-4 mx-auto">
+            <div class="xl:w-6/12 xl:ml-auto">
+                <h2 class="text-xl text-center sm:text-left md:text-4xl">Lorem ipsum dolor sit amet consectetur.</h2>
+                <div class="grid text-base sm:grid-cols-2 gap-x-9 sm:pt-8 md:pt-12">
+                    <div class="pt-5 sm:pt-0">
+                        <p class="w-4/5 md:text-xl">Lorem Ipsum Dolor sit Amet this is a Sample</p>
+                        <p class="pt-4 opacity-50 md:pt-7">Decentralized Reputation Ledger allows you to find and compare experts bnased on how accurate they’ve been in the past.</p>
+                    </div>
+                    <div class="pt-5 sm:pt-0">
+                        <p class="w-4/5 md:text-xl">Lorem Ipsum Dolor sit Amet this is a Sample</p>
+                        <p class="pt-4 opacity-50 md:pt-7">Decentralized Reputation Ledger allows you to find and compare experts bnased on how accurate they’ve been in the past.</p>
+                    </div>
+                </div>
+                <a class="flex items-center justify-center mt-5 font-bold text-white shadow-md md:mt-12 h-11 px-9 bg-gradient-to-r from-green-400 to-green-100 rounded-xl sm:inline-flex" href="#!">Discover Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-4 pb-8 sm:pb-10 md:pb-14 xl:pb-20 xl:pt-72">
+        <div class="container px-4 mx-auto">
+            <div class="xl:w-6/12">
+                <h2 class="text-xl text-center sm:text-left md:text-4xl">Lorem ipsum dolor sit</h2>
+                <div class="grid text-base text-gray-400 sm:grid-cols-2 gap-x-9 sm:pt-8 md:pt-12">
+                    <div class="pt-5 sm:pt-0">
+                        <p class="w-4/5 font-medium md:text-xl">Give your Audience a reason to trust you</p>
+                        <p class="pt-4 md:pt-7">Decentralized Reputation Ledger allows you to find and compare experts bnased on how accurate they’ve been in the past.</p>
+                        <p class="hidden pt-4 sm:block">Decentralized Reputation Ledger allows you to find and compare experts bnased on how accurate they’ve been in the past.</p>
+                    </div>
+                    <div class="pt-5 sm:pt-0">
+                        <p class="w-4/5 font-medium md:text-xl">Give your Audience a reason to trust you</p>
+                        <p class="pt-4 md:pt-7">Decentralized Reputation Ledger allows you to find and compare experts bnased on how accurate they’ve been in the past.</p>
+                        <p class="hidden pt-4 sm:block">Decentralized Reputation Ledger allows you to find and compare experts bnased on how accurate they’ve been in the past.</p>
+                    </div>
+                </div>
+                <a class="flex items-center justify-center mt-5 font-bold text-white shadow-md md:mt-12 h-11 px-9 bg-gradient-to-r from-green-400 to-green-100 rounded-xl sm:inline-flex" href="#!">Start Predicting</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 text-center text-white md:pt-12 md:pb-16 bg-gradient-to-r from-purple-700 to-pink-300 sm:py-10">
+        <div class="container px-4 mx-auto">
+            <h2 class="text-xl text-center md:text-4xl">Lorem ipsum</h2>
+            <ul class="grid sm:grid-cols-2 lg:grid-cols-4 md:gap-x-2">
+                <li class="pt-14 xl:max-w-xs">
+                        <div class="flex items-center justify-center mx-auto bg-white rounded-full w-30 h-30">
+                        <svg width="40" height="40" fill="none">
+                            <circle cx="20" cy="20" r="20" class="text-gray-300 fill-current"/>
+                            <path d="M19.5 10.5h4.646a.97.97 0 00.627-.226c1.039-.879 1.617-1.609 2.16-2.616.31-.575 1.063-.758 1.561-.336 9.448 7.998 8.505 12.957 4.676 22.1a.923.923 0 01-1.62.154.923.923 0 00-.115-.14l-.642-.643a1 1 0 00-.707-.293H27.5a1 1 0 01-1-1v-6a1 1 0 00-1-1h-11a1 1 0 01-1-1v-2a1 1 0 011-1h3a1 1 0 001-1v-4a1 1 0 011-1zM12.755 25.563c.854 1.058 1.557 2.238 2.136 3.468 2.689 5.706 4.897 4.464 3.788 6.096-.342.503-.79.989-1.395 1.032-1.947.14-5.986-1.806-8.628-4.718-3.131-3.453-4.28-12.125-3.036-13.254 1.074-.974 4.267 3.824 7.135 7.375z" class="text-white fill-current"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold pt-14">Public</h2>
+                    <p class="text-base opacity-90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime perspiciatis repellat esse ex veritatis.</p>
+                </li>
+                <li class="pt-14 xl:max-w-xs">
+                    <div class="flex items-center justify-center mx-auto bg-white rounded-full w-30 h-30">
+                        <svg width="38" height="45" fill="none">
+                            <path d="M18.597.68L1.124 8.236a1.02 1.02 0 00-.444.369.98.98 0 00-.166.545v17.11c0 .157.039.314.113.455 4.078 7.754 7.638 13.95 16.13 17.697.132.058.275.088.42.088h4.581c.22 0 .437-.07.614-.199 7.62-5.529 11.105-9.36 15.046-17.6a.99.99 0 00.096-.421V9.15a.98.98 0 00-.166-.545 1.021 1.021 0 00-.445-.369L19.431.681a1.052 1.052 0 00-.834 0V.68z" class="text-gray-300 fill-current"/>
+                            <path d="M4.111 22V11.995c0-.312.15-.607.408-.793 4.505-3.252 8.41-4.653 13.752-5.913a1.047 1.047 0 01.87.187.971.971 0 01.387.78v15.33c0 .146-.033.29-.097.423a.523.523 0 01.097-.009h13.36c.273 0 .535.105.728.293a.986.986 0 01.3.707v2.326c0 .115-.02.231-.061.339-2.894 7.766-7.04 11.69-13.891 15.127-.673.337-1.464-.146-1.464-.883V23.415c0-.147.033-.293.098-.426a.545.545 0 01-.111.012H5.139c-.273 0-.534-.105-.727-.293a.986.986 0 01-.3-.707V22z" class="text-white fill-current"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold pt-14">Trustless</h2>
+                    <p class="text-base opacity-90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime perspiciatis repellat esse ex veritatis.</p>
+                </li>
+                <li class="pt-14 xl:max-w-xs">
+                    <div class="flex items-center justify-center mx-auto bg-white rounded-full w-30 h-30">
+                        <svg width="32" height="43" fill="none">
+                            <circle cx="16" cy="28" r="4" class="text-gray-300 fill-current"/>
+                            <path d="M23.5 15.957V7.044c-5.486-6.719-8.836-6.732-15 0v8.913H2V40.6h28V15.957h-6.5zm0 0L8.5 16" class="text-gray-300 stroke-current stroke-4"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold pt-14">Permanent</h2>
+                    <p class="text-base opacity-90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime perspiciatis repellat esse ex veritatis.</p>
+                </li>
+                <li class="pt-14 xl:max-w-xs">
+                    <div class="flex items-center justify-center mx-auto bg-white rounded-full w-30 h-30">
+                        <svg width="40" height="41" fill="none">
+                            <path d="M20 21V2.5" class="text-gray-300 stroke-current stroke-4"/>
+                            <circle cx="20" cy="21" r="4" class="text-gray-300 fill-current"/>
+                            <circle cx="20" cy="21" r="18" class="text-gray-300 stroke-current stroke-4"/>
+                            <circle cx="20" cy="21" r="10" class="text-gray-300 stroke-current stroke-4"/>
+                            <path d="M22 16.027V1.49a1 1 0 011.379-.926l8.416 3.443a1 1 0 01.418 1.53l-8.416 11.095c-.58.763-1.797.353-1.797-.605z" class="text-white fill-current"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold pt-14">Decentralized</h2>
+                    <p class="text-base opacity-90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime perspiciatis repellat esse ex veritatis.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-8 sm:pb-10 md:py-12 xl:pt-16 xl:pb-36">
+        <div class="container px-4 mx-auto">
+            <div class="ml-auto xl:w-5/12">
+                <h2 class="text-xl text-center sm:text-left md:text-4xl">Lorem ipsum dolor sit</h2>
+                <h2 class="pt-2 font-medium text-center text-gray-400 sm:pt-8 md:pt-0 lg:pt-2 sm:text-left md:text-2xl">Lorem ipsum dolor sit amet.</h2>
+                <div class="grid text-base text-gray-400 gap-x-9 sm:grid-cols-2 sm:pt-5 md:pt-12">
+                    <div class="pt-5 sm:pt-0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non similique nihil accusantium, eveniet voluptatibus ex quas! Ea, tenetur laboriosam maiores omnis molestiae recusandae numquam provident porro repudiandae, placeat inventore?</p>
+                    </div>
+                    <div class="pt-5 sm:pt-0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque non similique nihil accusantium, eveniet voluptatibus ex quas! Ea, tenetur laboriosam maiores omnis molestiae recusandae numquam provident porro repudiandae, placeat inventore?</p>
+                    </div>
+                </div>
+                <a class="flex items-center justify-center mt-5 font-bold text-white shadow-md md:mt-12 h-11 px-9 bg-gradient-to-r from-green-400 to-green-100 rounded-xl sm:inline-flex" href="#!">View Our Demo</a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>
