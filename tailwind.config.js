@@ -27,6 +27,10 @@ module.exports = {
           700: '#5C40E0',
         },
       },
+      screens: {
+        '2xl': '1600px',
+        '3xl': '1920px',
+      },
       spacing: {
         '30': '7.5rem',
       },
