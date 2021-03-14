@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 
-<body class="antialiased bg-blue-50 font-body" x-data="{ atTop: window.pageYOffset < 64 }" @scroll.window="atTop = window.pageYOffset < 64">
+<body class="antialiased bg-blue-50 font-body" x-data="{ atTop: window.pageYOffset < 64, menuOpen: false }" @scroll.window="atTop = window.pageYOffset < 64">
 
     <svg class="absolute right-0 hidden w-11/12 gray-svg xl:block 3xl:w-4/5" width="1418" height="1600" fill="none" viewBox="0 0 1418 1472" preserveAspectRatio="none">
         <path d="M1417.5 243L1002.86 0 32.683 554.85c-42.09 24.072-42.35 84.677-.466 109.107L1417.5 1472V243z" fill="#4B5770"/>
@@ -31,7 +31,7 @@
     <nav class="fixed top-0 left-0 right-0 z-10 p-4 text-white transition duration-300 xl:p-9" :class="{ 'bg-white' : !atTop, 'text-white': atTop, 'text-black': !atTop, 'shadow-md': !atTop }">
         <div class="flex items-center justify-between">
             <div class="font-bold text-black">company</div>
-            <button class="inline-flex items-center justify-center w-12 h-8 bg-purple-500 rounded-xl xl:hidden" type="button">
+            <button class="inline-flex items-center justify-center w-12 h-8 bg-purple-500 rounded-xl xl:hidden" type="button" @click="menuOpen = !menuOpen">
                 <svg width="16" height="10" fill="none">
                     <rect class="text-white fill-current" y="4" width="16" height="2"/>
                     <rect class="text-white fill-current" y="8" width="16" height="2"/>
@@ -74,6 +74,29 @@
             </ul>
         </div>
     </nav>
+
+    <aside class="fixed z-10 pr-10 pl-5 pt-8 pb-5 bg-white rounded-md top-3.5 right-3 shadow-md opacity-0 transition-opacity duration-300" :class="{ 'pointer-events-none' : !menuOpen, 'opacity-100': menuOpen }">
+        <button class="absolute top-0 right-2" type="button" @click="{ menuOpen = !menuOpen }">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <title>Close mobile navigation</title>
+                <path d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z" fill="#8898AA" fill-rule="evenodd"/>
+            </svg>
+        </button>
+        <ul class="grid gap-y-2">
+            <li>
+                <a href="#!">Experts</a>
+            </li>
+            <li>
+                <a href="#!">Predictions</a>
+            </li>
+            <li>
+                <a href="#!">Whitepaper</a>
+            </li>
+            <li>
+                <a href="#!">Team</a>
+            </li>
+        </ul>
+    </aside>
 
     <section class="relative pt-30 lg:pt-36 xl:pt-80"> 
         <div class="container px-4 mx-auto">
@@ -153,7 +176,7 @@
                 </linearGradient>
             </defs>
         </svg>
-        <div class="container relative px-4 pt-12 pb-16 mx-auto transform -translate-y-1/2 top-2/4 xl:absolute sm:pt-16 sm:pb-32 xl:py-0">
+        <div class="container relative px-4 pt-12 pb-16 mx-auto transform xl:-translate-y-1/2 top-2/4 xl:absolute sm:pt-16 sm:pb-32 xl:py-0">
             <h2 class="text-xl text-center md:text-4xl">Lorem ipsum</h2>
             <ul class="grid pt-12 icons sm:grid-cols-2 lg:grid-cols-4 sm:gap-x-14 gap-y-14 xl:px-24 xl:gap-x-3 2xl:px-0 2xl:flex 2xl:justify-between">
                 <li class="xl:max-w-xs">
