@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 
-<body class="antialiased bg-blue-50 font-body" x-data="{ atTop: window.pageYOffset < 64, menuOpen: false }" @scroll.window="atTop = window.pageYOffset < 64">
+<body class="antialiased bg-blue-50 font-body" x-data="{ menuOpen: false }">
 
     <svg class="absolute right-0 hidden w-11/12 gray-svg xl:block 3xl:w-4/5" width="1418" height="1600" fill="none" viewBox="0 0 1418 1472" preserveAspectRatio="none">
         <path d="M1417.5 243L1002.86 0 32.683 554.85c-42.09 24.072-42.35 84.677-.466 109.107L1417.5 1472V243z" fill="#4B5770"/>
@@ -28,7 +28,7 @@
         </defs>
     </svg>
 
-    <nav class="fixed top-0 left-0 right-0 z-10 p-4 text-white transition duration-300 xl:p-9" :class="{ 'bg-white' : !atTop, 'text-white': atTop, 'text-black': !atTop, 'shadow-md': !atTop }">
+    <nav class="absolute top-0 left-0 right-0 z-10 p-4 pt-6 text-white transition duration-300 xl:p-9">
         <div class="flex items-center justify-between">
             <div class="font-bold text-black">company</div>
             <button class="inline-flex items-center justify-center w-12 h-8 bg-purple-500 rounded-xl xl:hidden" type="button" @click="menuOpen = !menuOpen">
@@ -75,7 +75,7 @@
         </div>
     </nav>
 
-    <aside class="fixed z-10 pr-10 pl-5 pt-8 pb-5 bg-white rounded-md top-3.5 right-3 shadow-md opacity-0 transition-opacity duration-300" :class="{ 'pointer-events-none' : !menuOpen, 'opacity-100': menuOpen }">
+    <aside class="fixed z-10 pt-8 pb-5 pl-5 pr-10 transition-opacity duration-300 bg-white rounded-md shadow-md opacity-0 top-5 right-3" :class="{ 'pointer-events-none' : !menuOpen, 'opacity-100': menuOpen }">
         <button class="absolute top-0 right-2" type="button" @click="{ menuOpen = !menuOpen }">
             <svg width="40" height="40" viewBox="0 0 40 40">
                 <title>Close mobile navigation</title>
